@@ -1,7 +1,7 @@
 # mapmg
 
 
-## plaintext-files
+## plaintext-info
 contains a program README, a database spec, and a user entry spec
 ## src
 contains two python files: a flask app populated with test cases and a SQL-ator which scrapes the flask site into a sql database. Description on how to run them is in the README
