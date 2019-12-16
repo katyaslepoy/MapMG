@@ -9,6 +9,8 @@ contains two python files: a flask app populated with test cases and a SQL-ator 
 ## sphinx
 contains the Sphinx documentation and html files. Main.html will open the index page of the site.
 It has links to the html versions of the readme and spec files.
+## supplieddocs
+contains the orignial request and files provided by the hiring team
 
 ## other files
 Sqlite database example from running test cases
