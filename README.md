@@ -13,5 +13,5 @@ It has links to the html versions of the readme and spec files.
 contains the orignial request and files provided by the hiring team
 
 ## other files
-Sqlite database example from running dwarvy test cases
+Sqlite database example from running dwarvy test cases  
 JPG visualization of sql database populated with test cases
