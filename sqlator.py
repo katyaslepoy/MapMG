@@ -19,8 +19,8 @@ cur.execute(
     Position TEXT,
     Program TEXT,
     School TEXT,
-    Time TIME,
-    id INT)""")
+    Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    id INTEGER PRIMARY KEY AUTOINCREMENT)""")
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
@@ -36,7 +36,7 @@ print('Retrieved', len(data))
 
 # load data and read into applicants.sqlite
 js = json.loads(data)
-added=[]
+# looping through provided json packs and adding info one column at a time
 for entry in js:
     columns = entry.keys()
     # integrity check
@@ -44,10 +44,10 @@ for entry in js:
         print(entry)
         print('Ignored for unavailable position')
         continue
-    # skips repeat entries
-    if entry not in added:
-        cur.execute("""INSERT INTO applicants (%s,%s,%s,%s,%s,%s,%s)
-                    VALUES (?,?,?,?,?,?,?)""" % (tuple(columns)), (tuple(entry.values()),))
 
-    added.append(entry)
+    cur.execute("""INSERT INTO applicants (%s,%s,%s,%s,%s)
+                        VALUES (?,?,?,?,?)""" % (tuple(columns)), (tuple(entry.values()),))
+
+
+
 

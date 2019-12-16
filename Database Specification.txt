@@ -1,0 +1,29 @@
+DATABASE SPECIFICATION
+***********************
+
+OVERVIEW
+*********
+The database is an sqlite table with 7 columns, 5 are user-provided information.
+It holds current applicants that have applied for available positions.
+
+COLUMNS
+********
+
+PROVIDED BY USER:
+First       TEXT ---- First Name, provided by user
+Last        TEXT ---- Last Name, provided by user
+Position    TEXT ---- Position to Apply For, chosen by user, must be present in provided list to be included in database
+Program     TEXT ---- Applicant's major, provided by user
+School      TEXT ---- Applicant's school, provided by use
+
+AUTO-GENERATED:
+Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP --- auto-generated timestamp
+id INTEGER PRIMARY KEY AUTOINCREMENT --- auto generated id key
+
+TYPE KEY
+*********
+TEXT ---- The value is a text string, stored using the database encoding (UTF-8, UTF-16BE or UTF-16LE).
+DATETIME DEFAULT CURRENT_TIMESTAMP ---- in format yyyy/mm/dd hh:mm:ss
+INTEGER PRIMARY KEY AUTOINCREMENT  ---- in integer format
+
+

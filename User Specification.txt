@@ -1,0 +1,9 @@
+USER SPECIFICATION
+The user will need to enter their first name, last name, school, 
+program, and desired position. If they do not enter the desired 
+position exactly as specified in the list of available positions, 
+their entry will be ignored. An option menu is recommended. Other 
+fields can be entered as plain text in alphanumeric characters.
+
+An automatic unique id and timestamp will be inserted by the 
+system for each entry.

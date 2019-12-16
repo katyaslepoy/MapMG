@@ -7,55 +7,52 @@ from flask import jsonify, request
 app = flask.Flask(__name__)
 # Create some test data for our catalog in the form of a list of dictionaries.
 applicants = [
-    {'id': 0,
+    {
      'Last': 'Guy',
      'First': 'Grumpy',
      'Position': 'Software Development Intern',
      'School': 'University of Maryland',
-     'Program': 'Rage Studies',
-     'Time': '20:02:11'},
-    {'id': 1,
+     'Program': 'Rage Studies'
+     },
+    {
      'Last': 'Doc',
      'First': 'Tiny',
      'Position': 'Software Development Intern',
      'School': 'Academy for Small Doctors',
-     'Program': 'Princess Revival',
-     'Time': '01:21:41'},
-    {'id': 2,
+     'Program': 'Princess Revival'},
+    {
      'Last': 'Happy',
      'First': 'Mister',
      'Position': 'Happiness Analyst',
      'School': 'Lumberjack Academy',
-     'Program': 'Smiling at Strangers',
-     'Time': '11:24:14'},
-    {'id': 3,
+     'Program': 'Smiling at Strangers'
+     },
+    {
      'Last': 'Boy',
      'First': 'Bashful',
      'Position': 'Software Development Intern',
      'School': 'UMBC',
-     'Program': 'Avoiding Strangers',
-     'Time': '09:01:31'},
-    {'id': 4,
+     'Program': 'Avoiding Strangers'
+     },
+    {
      'Last': 'Sneezy',
      'Program': 'Hip-Hop',
      'First': 'Lil',
      'Position': 'Software Development Intern',
-     'School': 'Julliard',
-     'Time': '12:42:11'},
-    {'id': 5,
+     'School': 'Julliard'
+     },
+    {
      'Last': 'Dumps',
      'First': 'Dopey',
      'Position': 'Software Development Intern',
      'School': 'Montgomery College',
-     'Program': 'Electrical Engineering',
-     'Time': '20:22:50'},
-    {'id': 6,
-     'Last': 'Sleepy',
+     'Program': 'Electrical Engineering'
+     },
+    {'Last': 'Sleepy',
      'First': 'Sir',
      'School': 'New York University',
      'Position': 'Software Development Intern',
-     'Program': 'Architecture',
-     'Time': '10:02:11'},
+     'Program': 'Architecture'},
 
 ]
 
